@@ -13,7 +13,7 @@ socket.on('moved', (payload) => {
   prompt.start();
 
   prompt.get(['move'], (err, data) => {
-    socket.emit('move', {move: data.command});
-    console.log('You selected', data.command);
+    socket.emit('move', {move: data.move});
+    console.log('You selected', data.move);
   });
 })
