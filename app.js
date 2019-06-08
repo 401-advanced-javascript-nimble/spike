@@ -5,9 +5,10 @@ const prompt = require('prompt');
 
 const socket = client.connect('http://localhost:3000');
 
+socket.emit('move');
 
-socket.on('turn', (payload) => {
-  console.log('It\'s youre turn');
+socket.on('moved', (payload) => {
+  console.log('It\'s your turn');
 
   prompt.start();
 
