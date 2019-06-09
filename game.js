@@ -94,7 +94,7 @@ const getInput = () => {
   });
 };
 
-// Chris - Here is the gameplay loop. This continues until totalRemainingItems is 0, which changes isGameOver to false.
+// Chris - Here is the gameplay loop. This continues until totalRemainingItems is 0, which changes isGameOver to true.
 const gameCycle = (stackNumber, numberToTake) => {
   if(checkChoices(stackNumber, numberToTake) === true) {
     takeItemsFromStack(stackNumber, numberToTake);
